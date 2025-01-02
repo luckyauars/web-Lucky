@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Saya</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Halaman 1: Hero Section -->
+    <section id="hero">
+      <h2 class="hero-title"><span id="typing"></span></h2>
+      <img src="assets/FOTO CV 0.2.jpg" alt="Foto Profil" class="profile-pic" />
+      <div class="hero-content">
+        <p>Hai Saya</p>
+        <h1>Lucky Aulia Arisdi</h1>
+        <p>IT Development</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Tentang Saya</h2>
+      <p>
+        Lulusan SMK Negeri 5 Malang jurusan Rekayasa Perangkat Lunak dengan
+        fokus pada pengembangan perangkat lunak, pengembangan website, IT
+        support, dan sistem server support. Berpengalaman dalam proyek
+        pengembangan website menggunakan HTML, PHP framework, Java, serta
+        pengembangan game menggunakan Unity.
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>HTML, CSS, dan JavaScript</li>
+        <li>Framework Laravel</li>
+        <li>Pengolahan Citra Digital</li>
+        <li>IoT dengan NodeMCU</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Kontak</h2>
+      <p>
+        Email:
+        <a href="mailto:luckyarisdi7@gmail.com">luckyarisdi7@gmail.com</a>
+      </p>
+      <p>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/lucky-aulia-arisdi-ab9a66268"
+          target="_blank"
+          >Profile Linkedin</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Recruitment Web Developer & IT Support.</p>
+    </footer>
+
+    <!-- Typewriter.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect/dist/core.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const app = document.getElementById("typing");
+
+        const typewriter = new Typewriter(app, {
+          loop: false,
+          delay: 100,
+        });
+
+        typewriter.typeString("Xionco").pauseFor(500).start();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+/* Resetting defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.hero-title {
+  position: absolute;
+  top: 15%; /* Jarak dari atas */
+  left: 50%; /* Pusatkan secara horizontal */
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+  overflow: hidden; /* Hindari teks melampaui area */
+  white-space: nowrap; /* Hindari teks turun ke baris baru */
+}
+
+/* Full-height Hero Section */
+#hero {
+  display: flex;
+  align-items: center; /* Vertikal: Tengah */
+  justify-content: space-between; /* Teks di kiri, gambar di kanan */
+  padding: 0 10%; /* Jarak dari tepi kiri dan kanan */
+  background: linear-gradient(to bottom, #fa6b6b, #f84141);
+  color: rgb(255, 255, 255);
+  height: 100vh;
+}
+.hero-content {
+  flex: 1; /* Teks mengambil bagian kiri */
+  max-width: 600px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  margin: 0 auto;
+  flex: 0;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  #hero {
+    display: flex;
+    flex-direction: column; /* Tata letak vertikal */
+    padding: 24rem 5rem; /* Tambahkan lebih banyak padding atas dan bawah */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    text-align: center; /* Pusatkan teks secara horizontal */
+    gap: 0rem; /* Tambahkan jarak antar elemen secara keseluruhan */
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem; /* Jarak antara gambar dan teks */
+    width: 180px; /* Gambar lebih kecil di layar kecil */
+    height: 180px;
+  }
+
+  .hero-content {
+    text-align: center; /* Pusatkan teks di bawah gambar */
+    margin-top: 1rem; /* Tambahkan jarak lebih banyak di bawah gambar */
+  }
+}
+
+/* Other Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.hero-title {
+  left: 50%; /* Tengah secara horizontal */
+  transform: translateX(-50%); /* Koreksi posisi ke tengah */
+  text-align: center; /* Teks rata tengah */
+  font-size: 2.5rem; /* Ukuran teks lebih kecil */
+}
+
+#about {
+  background: #f4f4f9;
+}
+
+#skills {
+  background: #e0f7fa;
+}
+
+#contact {
+  background: #fce4ec;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f84f4f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+}
