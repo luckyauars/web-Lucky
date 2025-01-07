@@ -11,6 +11,17 @@ body {
   color: #333;
 }
 
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Gambar memenuhi lebar */
+  height: 100%; /* Gambar memenuhi tinggi */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  z-index: -1; /* Letakkan di belakang semua elemen lain */
+  opacity: 1; /* Transparansi, jika perlu */
+}
+
 .hero-title {
   position: absolute;
   top: 15%; /* Jarak dari atas */
@@ -27,22 +38,25 @@ body {
 
 /* Full-height Hero Section */
 #hero {
+  position: relative;
   display: flex;
   align-items: center; /* Vertikal: Tengah */
   justify-content: space-between; /* Teks di kiri, gambar di kanan */
   padding: 0 10%; /* Jarak dari tepi kiri dan kanan */
-  background: linear-gradient(to bottom, #fa6b6b, #f84141);
+  background: linear-gradient(to bottom, #ff8484 70%, #ffffff 50%);
   color: rgb(255, 255, 255);
   height: 100vh;
+  z-index: 0; /* Pastikan elemen hero tetap terlihat di atas background */
 }
+
 .hero-content {
   flex: 1; /* Teks mengambil bagian kiri */
   max-width: 600px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid white;
   object-fit: cover;
@@ -99,6 +113,72 @@ body {
   background: #fce4ec;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f84f4f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+}
+
+.dynamic-island {
+  position: fixed;
+  top: 20px; /* Jarak dari atas */
+  left: 50%; /* Pusatkan secara horizontal */
+  transform: translateX(-50%);
+  width: auto; /* Agar menyesuaikan dengan isi */
+  height: auto; /* Agar menyesuaikan dengan isi */
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1; /* Reset line-height */
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  transition: visibility 0.3s ease, opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 10px 20px; /* Tambahkan padding agar tombol nyaman dilihat */
+  display: flex; /* Layout fleksibel */
+  gap: 10px; /* Jarak antar tombol */
+  align-items: center; /* Rata tengah secara vertikal */
+  z-index: 1000; /* Pastikan Dynamic Island memiliki z-index lebih tinggi */
+}
+
+.dynamic-island.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dynamic-island button {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dynamic-island button:hover {
+  background-color: white;
+  color: #ff0000;
+}
+
+/* Section styles untuk memberikan ruang pada dynamic island */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Additional styles for section headings */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
